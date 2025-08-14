@@ -1,27 +1,40 @@
-// @ts-check
 import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
   CursorArrowRaysIcon,
   DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
   SunIcon,
 } from "@heroicons/react/24/solid";
-import feetHurtIcon from "../../public/icon/gout.png";
+import feetHurtIcon from "../../public/icon/feet.png";
+import noMeatIcon from "../../public/icon/no_meat.png";
+import medicineIcon from "../../public/icon/medicine.png";
+import feetInjectionIcon from "../../public/icon/feet_injection.png";
 
 import benefitOneImg from "../../public/img/benefit-one.png";
 import benefitTwoImg from "../../public/img/benefit-two.png";
 import Image from "next/image";
-import React from "react";
+import { ReactNode } from "react";
 
-const benefitOne = {
+interface Bullet {
+  title: string;
+  desc: string;
+  icon: ReactNode;
+}
+
+interface Benefit {
+  title: string;
+  desc: string;
+  image: any; // Next.js static imports are type 'any' unless you use custom types
+  bullets: Bullet[];
+}
+
+const benefitOne: Benefit = {
   title: "Do any of these sound familiar?",
   desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
   image: benefitOneImg,
   bullets: [
     {
       title: "Sudden, stabbing pain in your feet or big toe — out of nowhere",
-      desc: "Then explain the first point breifly in one or two lines.",
+      desc: "Then explain the first point briefly in one or two lines.",
       icon: (
         <Image
           alt="gout-feet-icon"
@@ -34,18 +47,36 @@ const benefitOne = {
       title:
         "You’ve tried cutting out meat, beer, and even fun — but still no relief",
       desc: "Here you can add the next benefit point.",
-      icon: <ChartBarSquareIcon />,
+      icon: (
+        <Image
+          alt="no-meat-icon"
+          src={noMeatIcon}
+          style={{ filter: "invert(1)" }}
+        />
+      ),
     },
     {
       title:
         "Your meds help a little, but the side effects are worse than the gout",
       desc: "This will be your last bullet point in this section.",
-      icon: <CursorArrowRaysIcon />,
+      icon: (
+        <Image
+          alt="no-meat-icon"
+          src={medicineIcon}
+          style={{ filter: "invert(1)" }}
+        />
+      ),
     },
     {
       title: "You’re tired of living in fear of the next painful flare-up",
       desc: "This will be your last bullet point in this section.",
-      icon: <CursorArrowRaysIcon />,
+      icon: (
+        <Image
+          alt="no-meat-icon"
+          src={feetInjectionIcon}
+          style={{ filter: "invert(1)" }}
+        />
+      ),
     },
     {
       title:
@@ -56,7 +87,7 @@ const benefitOne = {
   ],
 };
 
-const benefitTwo = {
+const benefitTwo: Benefit = {
   title: "Offer more benefits here",
   desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
   image: benefitTwoImg,
