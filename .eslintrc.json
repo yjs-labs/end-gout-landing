@@ -1,9 +1,10 @@
 {
   "extends": ["next/core-web-vitals", "plugin:react/recommended"],
-  "plugins": ["unused-imports"],
+  "plugins": ["unused-imports", "react"],
   "rules": {
     "no-unused-vars": "warn",
-    "unused-imports/no-unused-imports": "warn"
+    "unused-imports/no-unused-imports": "warn",
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "react": {
