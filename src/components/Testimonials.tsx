@@ -9,46 +9,54 @@ import userThreeImg from "../../public/img/user3.jpg";
 export const Testimonials = () => {
   return (
     <Container>
+      <div className="mb-10 text-center">
+        <h2 className="text-4xl font-bold mb-4">“Real People. Real Relief.”</h2>
+        <p className="text-xl text-gray-700 dark:text-gray-300">
+          Hear from those who broke free from gout’s grip — and never looked
+          back.
+        </p>
+      </div>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+              “I used to dread waking up every morning, not knowing if I could
+              even walk to the kitchen. After following this plan, I’ve been
+              flare-up free for 8 months — I even hiked with my grandkids last
+              weekend.”
             </p>
-
             <Avatar
               image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
+              name="James R."
+              title="62, Retired Firefighter"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+              “Beer nights with friends used to be off-limits. Now, I know
+              exactly what I can enjoy without paying the price later. My doctor
+              was shocked at my latest uric acid levels.”
             </p>
-
             <Avatar
               image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              name="Mark L."
+              title="55, Small Business Owner"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve
-              seen. I would use this for anything.
+              “I thought I had to live with gout forever. This program showed me
+              I could take control, not just cope. The peace of mind is
+              priceless.”
             </p>
-
             <Avatar
               image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              name="Linda S."
+              title="59, Nurse Practitioner"
             />
           </div>
         </div>
@@ -83,13 +91,13 @@ function Avatar(props: Readonly<AvatarProps>) {
   );
 }
 
-function Mark(props: { readonly children: React.ReactNode }) {
-  return (
-    <>
-      {" "}
-      <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
-        {props.children}
-      </mark>{" "}
-    </>
-  );
-}
+// function Mark(props: { readonly children: React.ReactNode }) {
+//   return (
+//     <>
+//       {" "}
+//       <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
+//         {props.children}
+//       </mark>{" "}
+//     </>
+//   );
+// }
